@@ -13,6 +13,11 @@ This repository contains the backend code, handling all server-side operations f
 
 ---
 
+## Link of Documentation collection for Postman 
+- https://fullstackclass.postman.co/workspace/c48c3db5-695b-4225-a22d-11b6d8cc3b79/documentation/15799054-189a292b-d85f-4f60-82a5-04d8bb9d9a5c
+
+---
+
 ## Features
 
 1. **User Authentication**: Register, login, and update profile (username, bio, profile picture) using JWT tokens.

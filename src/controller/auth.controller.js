@@ -10,7 +10,6 @@ const userModel = require("../model/user.model");
 const TokenUtils = require("../utils/tokenUtils");
 const ResponseUtils = require("../utils/responseUtils");
 const bcrypt = require("bcrypt");
-const { token } = require("morgan");
 
 const register = async (req, res) => {
   try {
