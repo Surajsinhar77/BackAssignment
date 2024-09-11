@@ -2,9 +2,14 @@
 
 ## Overview
 
-StockPost is a MERN (MongoDB, Express.js, React, Node.js) stack-based application that allows users to create, comment, like, and manage stock-related posts. The app also includes real-time updates for comments and likes using **Socket.io** and implements **JWT-based user authentication** for secure access.
+StockPost is a MERN stack application I developed as an assigned project. It's a platform for sharing and interacting with stock-related posts. Key features:
 
-This repository contains the **backend** code that powers StockPost, handling user authentication, post management, commenting, and real-time updates.
+- User authentication with JWT
+- Post creation, commenting, and liking
+- Real-time updates using Socket.io
+- MongoDB for data storage
+
+This repository contains the backend code, handling all server-side operations for StockPost.
 
 ---
 
