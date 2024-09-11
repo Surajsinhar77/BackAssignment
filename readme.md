@@ -18,6 +18,139 @@ This repository contains the **backend** code that powers StockPost, handling us
 6. **Pagination**: Supports pagination when fetching posts.
 7. **Real-time Updates**: Real-time updates for comments and likes using **Socket.io**.
 8. **API Documentation**: Optional API documentation using **Postman**.
+---
+
+## Features and Implementation
+
+### 1. User Authentication
+
+**Feature:** Register, login, and update profile (username, bio, profile picture) using JWT tokens.
+
+**Implementation:**
+- Utilized JWT (JSON Web Tokens) for secure authentication
+- Implemented both access tokens and refresh tokens for enhanced security
+- Used bcrypt for password hashing to ensure password security
+- Integrated cookie-based authentication for a seamless user experience
+- Created middleware to verify and validate tokens on protected routes
+
+Our authentication flow ensures that user credentials are securely managed and that access to protected resources is carefully controlled.
+
+- JWT Token Generation
+![alt text](image-1.png)
+
+- JWT Token Verification
+![alt text](image-2.png)
+
+- bcrypt Password Hashing
+![alt text](image-3.png)
+
+- Cookie-based Authentication
+![alt text](image-4.png)
+
+- Middleware for Token Verification
+![alt text](image-5.png)
+
+### 2. Stock Post Management
+
+**Feature:** Users can create posts related to specific stocks with stock symbols, titles, descriptions, and tags.
+
+**Implementation:**
+- Designed a robust database schema to store post information
+- Created API endpoints for CRUD operations on posts
+- Implemented input validation to ensure data integrity
+- Added authorization checks to ensure only authenticated users can create posts
+
+Users can easily create, edit, and delete their stock-related posts, providing valuable insights to the community.
+
+![alt text](image-6.png)
+
+### 3. Commenting System
+
+**Feature:** Users can comment on posts. Comments are linked to both the user and the post.
+
+**Implementation:**
+- Developed a NoSql database structure to link comments with users and posts
+- Created API endpoints for adding, editing, and deleting comments
+- Implemented commenting functionality 
+- Added real-time updates for comments using Socket.io
+
+Our commenting system fosters engaging discussions around stock posts, allowing users to share their thoughts and insights.
+- Database Schema for Comments
+![alt text](image-8.png)
+- Real-time Updates for Comments
+![alt text](image-7.png)
+
+### 4. Like System
+
+**Feature:** Users can like or unlike posts. The total number of likes is displayed on each post.
+
+**Implementation:**
+- Created a many-to-many relationship between users and posts for likes
+- Implemented API endpoints for liking and unliking posts
+- Added a counter for total likes on each post
+- Ensured real-time updates of like counts using Socket.io
+
+The like system provides a quick way for users to show appreciation for valuable posts and helps surface popular content.
+
+![alt text](image-10.png)
+
+### 5. Filtering and Sorting
+
+**Feature:** Posts can be filtered by stock symbol or tags, and sorted by date or number of likes.
+
+**Implementation:**
+- Developed flexible API endpoints that accept query parameters for filtering and sorting
+- Implemented database queries to efficiently filter and sort posts
+- Created a user-friendly interface for applying filters and sorts
+
+Users can easily find relevant content by filtering posts based on their interests and sorting them according to their preferences.
+
+![alt text](image-11.png)
+
+### 6. Pagination
+
+**Feature:** Supports pagination when fetching posts.
+
+**Implementation:**
+- Implemented cursor-based pagination for efficient data fetching
+- Added pagination parameters to relevant API endpoints
+- Ensured smooth integration with filtering and sorting features
+
+Pagination improves application performance and user experience by loading data in manageable chunks.
+
+![alt text](image-11.png)
+
+### 7. Real-time Updates
+
+**Feature:** Real-time updates for comments and likes using Socket.io.
+
+**Implementation:**
+- Integrated Socket.io for WebSocket communication
+- Implemented event emissions for new comments, likes, and posts
+- Created client-side listeners to update the UI in real-time
+- Ensured proper error handling and reconnection logic
+
+Real-time updates create a dynamic and engaging user experience, allowing users to see new content as it's created.
+
+![alt text](image-12.png)
+
+### 8. API Documentation
+
+**Feature:** Optional API documentation using Postman.
+
+**Implementation:**
+- Created comprehensive API documentation using Postman
+- Included detailed descriptions for each endpoint, including request/response formats
+- Provided example requests and responses for easy understanding
+- Ensured documentation is kept up-to-date with API changes
+
+
+
+### 9. Zod Schema Validation
+
+**Feature:** Implemented Zod for JavaScript schema validation.
+
+![alt text](image-9.png)
 
 ---
 
@@ -49,8 +182,6 @@ This repository contains the **backend** code that powers StockPost, handling us
 - [Database Schema](#database-schema)
 - [Running Tests](#running-tests)
 - [Socket.io Real-time Updates](#socketio-real-time-updates)
-<!-- - [Contributing](#contributing)
-- [License](#license) -->
 
 ---
 
