@@ -14,7 +14,14 @@ This repository contains the backend code, handling all server-side operations f
 ---
 
 ## Link of Documentation collection for Postman 
-- https://fullstackclass.postman.co/workspace/c48c3db5-695b-4225-a22d-11b6d8cc3b79/documentation/15799054-189a292b-d85f-4f60-82a5-04d8bb9d9a5c
+- https://documenter.getpostman.com/view/15799054/2sAXqmAk5M
+
+## Collection Link
+Link -1
+- https://fullstackclass.postman.co/workspace/Assignment~c48c3db5-695b-4225-a22d-11b6d8cc3b79/collection/15799054-189a292b-d85f-4f60-82a5-04d8bb9d9a5c?action=share&creator=15799054&active-environment=15799054-b00b878e-a32c-45b3-b24d-af5ceb46da7d
+
+Link -2
+- https://documenter.getpostman.com/view/15799054/2sAXqmAk5M
 
 ---
 
