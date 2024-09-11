@@ -212,6 +212,35 @@ This repository contains the **backend** code that powers StockPost, handling us
    Optional query parameters: `stockSymbol`, `tags`, `sortBy`
    Request : `GET /api/posts?stockSymbol=AAPL&tags=tech&sortBy=likes`
 
+   Response:
+
+   ```json
+   {
+        "data": {
+            "posts": [
+                {
+                    "_id": "66dff5ff0ca42f8d2c950c23",
+                    "stockSymbol": "AAGL",
+                    "title": "This is title post",
+                    "description": "The descriptionof the post in long",
+                    "likesCount": 0,
+                    "createdAt": "2024-09-10T07:32:15.029Z"
+                },
+                {
+                    "_id": "66dff5ff0ca42f8d2c950c25",
+                    "stockSymbol": "AAGL",
+                    "title": "This is title post",
+                    "description": "The descriptionof the post in long",
+                    "likesCount": 1,
+                    "createdAt": "2024-09-10T07:32:15.991Z"
+                }
+            ],
+            "page": 1,
+            "limit": 10
+        }
+    }
+   ```
+
 3. **Get a Single Stock Post** - `GET /api/posts/:postId`
 
 4. **Delete a Stock Post** - `DELETE /api/posts/:postId`
