@@ -17,7 +17,7 @@ This repository contains the **backend** code that powers StockPost, handling us
 5. **Filtering and Sorting**: Posts can be filtered by stock symbol or tags, and sorted by date or number of likes.
 6. **Pagination**: Supports pagination when fetching posts.
 7. **Real-time Updates**: Real-time updates for comments and likes using **Socket.io**.
-8. **API Documentation**: Optional API documentation using **Swagger** or **Postman**.
+8. **API Documentation**: Optional API documentation using **Postman**.
 
 ---
 
@@ -49,8 +49,8 @@ This repository contains the **backend** code that powers StockPost, handling us
 - [Database Schema](#database-schema)
 - [Running Tests](#running-tests)
 - [Socket.io Real-time Updates](#socketio-real-time-updates)
-- [Contributing](#contributing)
-- [License](#license)
+<!-- - [Contributing](#contributing)
+- [License](#license) -->
 
 ---
 
@@ -66,7 +66,7 @@ This repository contains the **backend** code that powers StockPost, handling us
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/StockPost.git
+   git clone https://github.com/Surajsinhar77/BackAssignment.git
    ```
 
 2. **Navigate into the project directory**:
@@ -346,7 +346,7 @@ Real-time updates for likes and comments are powered by **Socket.io**. When a us
 
 ---
 
-## Contributing
+<!-- ## Contributing
 
 Contributions are welcome! Please follow the guidelines below:
 
@@ -357,8 +357,6 @@ Contributions are welcome! Please follow the guidelines below:
 5. Push to the branch (`git push origin feature-name`).
 6. Create a pull request.
 
-
-
----
+--- -->
 
 By following this guide, you will have a fully functional backend setup for the StockPost application.
