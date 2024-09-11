@@ -13,6 +13,12 @@ This repository contains the backend code, handling all server-side operations f
 
 ---
 
+<!-- hight list the next heading -->
+## LINK FOR LIVE DEPLOYED BACKEND IN CASE YOU DON'T WANT TO SETUP LOCALLY
+## THIS IS FREE SERVER AND IT MAY TAKE SOME TIME TO LOAD IN FIRST TIME
+- https://backassignment.onrender.com/
+## THIS IS ALSO ALREADY CONNECTED TO POSTMAN 
+
 ## Link of Documentation collection for Postman 
 - https://documenter.getpostman.com/view/15799054/2sAXqmAk5M
 
