@@ -508,6 +508,9 @@ Real-time updates for likes and comments are powered by **Socket.io**. When a us
 - `newComment`: Broadcasted when a new comment is added to a post.
 - `newLike`: Broadcasted when a post is liked.
 
+    Example of socket.io client
+    ![alt text](image.png)
+
 ---
 
 <!-- ## Contributing
