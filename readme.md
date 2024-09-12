@@ -30,7 +30,7 @@ Link -2
 - https://documenter.getpostman.com/view/15799054/2sAXqmAk5M
 
 
-Link for Socket.io collection 
+Link for Socket.io collection OR INSTRUCTION go -->  - [Socket.io Real-time Updates](#socketio-real-time-updates)
 - https://fullstackclass.postman.co/workspace/Assignment~c48c3db5-695b-4225-a22d-11b6d8cc3b79/collection/66e10157406ecba7a2d9a318?action=share&creator=15799054
 ---
 
