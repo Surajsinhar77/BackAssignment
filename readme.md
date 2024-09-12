@@ -231,7 +231,7 @@ Real-time updates create a dynamic and engaging user experience, allowing users 
 2. **Navigate into the project directory**:
 
    ```bash
-   cd StockPost
+   cd BackAssignment
    ```
 
 3. **Install dependencies**:
