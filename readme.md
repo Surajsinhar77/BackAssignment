@@ -431,7 +431,7 @@ Real-time updates create a dynamic and engaging user experience, allowing users 
 ### Real-time Updates
 
 - **Socket.io Events**: Users receive real-time updates when a new comment or like is added to a post they are viewing.
-- **Socket request URL** - "http://localhost:5000/commentsAndLikes"
+- **Socket request URL** - "http://localhost:5000/commentsAndLikes" OR "https://backassignment.onrender.com/"
     ![alt text](image.png)
     Add all the Events in the socket.io client side code to get the real time updates.
     - `likePost`: Broadcasted when a post is liked.
@@ -498,6 +498,11 @@ Real-time updates for likes and comments are powered by **Socket.io**. When a us
 
 ### Socket Events
 
+    ### Steps to connect to socket.io
+    1. Add https://backassignment.onrender.com/ in the socket.io client request in Postman
+    2. Add all the Events in the socket.io client side code to get the real time updates.
+    3. Press the connect button in the socket.io client side code to connect to the socket.io server.
+    4. User Like or comment Api to get the real time updates.
 - `newComment`: Broadcasted when a new comment is added to a post.
 - `newLike`: Broadcasted when a post is liked.
 
