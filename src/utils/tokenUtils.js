@@ -54,46 +54,48 @@ class TokenService{
         }
     }
 
-    setTokenCookies = async (res, accessToken, refreshToken) => {
+    const setTokenCookies = async (res, accessToken, refreshToken) => {
         const isProduction = process.env.NODE_ENV === 'production';
-        const domain = isProduction ? 'localhost:3000' : undefined;
-
+        const domain = isProduction ? 'your-domain.com' : 'localhost';
+    
         res.cookie('accessToken', accessToken, { 
             httpOnly: true,
-            secure: true,
-            // domain: domain,
+            secure: isProduction, // Only secure in production
+            domain: domain, // Ensure the correct domain
             path: '/',
-            sameSite: 'None' // or 'Lax' depending on your requirement
+            sameSite: isProduction ? 'None' : 'Lax', // Cross-site cookies for production
         });
-
+    
         res.cookie('refreshToken', refreshToken, { 
             maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
             httpOnly: true,
-            secure: true,
+            secure: isProduction, // Only secure in production
+            domain: domain, // Ensure the correct domain
             path: '/',
-            // domain: domain,
-            sameSite: 'None' // or 'Lax' depending on your requirement
+            sameSite: isProduction ? 'None' : 'Lax', // Cross-site cookies for production
         });
     };
 
 
-    removeTokenCookies = async (res, UserId) => {
+
+    const removeTokenCookies = async (res, UserId) => {
         const isProduction = process.env.NODE_ENV === 'production';
-        const domain = isProduction ? 'www.something.com' : undefined;
+        const domain = isProduction ? 'your-domain.com' : 'localhost';
     
         const cookieOptions = { 
             path: '/', 
-            // domain: domain, 
-            secure: true, 
+            domain: domain, 
+            secure: isProduction, 
             httpOnly: true, 
-            sameSite: 'None' // or 'Lax' depending on your requirement
+            sameSite: isProduction ? 'None' : 'Lax' // Cross-site for production
         };
-
-        await userModel.findByIdAndUpdate(UserId, {token: ""});
+    
+        await userModel.findByIdAndUpdate(UserId, { token: "" });
     
         res.clearCookie('accessToken', cookieOptions);
         res.clearCookie('refreshToken', cookieOptions);
     };
+
 }
 
 module.exports = new TokenService();
