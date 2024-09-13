@@ -15,7 +15,7 @@ const { Server } = require("socket.io");
 const server = http.createServer(app);
 const io = new Server(server ,{
   cors: {
-      origin: "http://localhost:5500", // Change this to your client's origin
+      origin: "http://localhost:3000", // Change this to your client's origin
       methods: ["GET", "POST"],
       allowedHeaders: ["Authorization"],
       credentials: true,
@@ -55,7 +55,7 @@ app.use(morgon("dev")); // Log requests to the console
 // CORS middleware
 app.use(
   cors({
-    origin: "http://localhost:5500", // The client origin
+    origin: "http://localhost:3000", // The client origin
     credentials: true, // Allow cookies and credentials to be shared
     allowedHeaders: ["Authorization", "Content-Type"], // Allow required headers
   })
