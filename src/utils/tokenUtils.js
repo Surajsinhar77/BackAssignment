@@ -54,47 +54,46 @@ class TokenService{
         }
     }
 
-    const setTokenCookies = async (res, accessToken, refreshToken) => {
+    async setTokenCookies(res, accessToken, refreshToken) {
         const isProduction = process.env.NODE_ENV === 'production';
-        const domain = isProduction ? 'your-domain.com' : 'localhost';
-    
-        res.cookie('accessToken', accessToken, { 
+        const domain = isProduction ? '.yourdomain.com' : undefined; // Use your domain in production
+        const secureFlag = isProduction; // Secure only in production (HTTPS)
+
+        res.cookie('accessToken', accessToken, {
             httpOnly: true,
-            secure: isProduction, // Only secure in production
-            domain: domain, // Ensure the correct domain
+            secure: secureFlag, // Only secure in production (HTTPS)
+            domain: domain, // Set domain for cross-domain cookies
             path: '/',
-            sameSite: isProduction ? 'None' : 'Lax', // Cross-site cookies for production
+            sameSite: 'None', // Allow cross-site cookies
         });
-    
-        res.cookie('refreshToken', refreshToken, { 
+
+        res.cookie('refreshToken', refreshToken, {
             maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
             httpOnly: true,
-            secure: isProduction, // Only secure in production
-            domain: domain, // Ensure the correct domain
+            secure: secureFlag,
+            domain: domain,
             path: '/',
-            sameSite: isProduction ? 'None' : 'Lax', // Cross-site cookies for production
+            sameSite: 'None',
         });
-    };
+    }
 
-
-
-    const removeTokenCookies = async (res, UserId) => {
+    async removeTokenCookies(res, UserId) {
         const isProduction = process.env.NODE_ENV === 'production';
-        const domain = isProduction ? 'your-domain.com' : 'localhost';
-    
-        const cookieOptions = { 
-            path: '/', 
-            domain: domain, 
-            secure: isProduction, 
-            httpOnly: true, 
-            sameSite: isProduction ? 'None' : 'Lax' // Cross-site for production
+        const domain = isProduction ? '.yourdomain.com' : undefined; // Use your domain in production
+
+        const cookieOptions = {
+            path: '/',
+            domain: domain,
+            secure: isProduction,
+            httpOnly: true,
+            sameSite: 'None', // Allow cross-site cookies
         };
-    
+
         await userModel.findByIdAndUpdate(UserId, { token: "" });
-    
+
         res.clearCookie('accessToken', cookieOptions);
         res.clearCookie('refreshToken', cookieOptions);
-    };
+    }
 
 }
 
