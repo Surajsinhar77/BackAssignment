@@ -63,7 +63,7 @@ class TokenService{
             secure: isProduction,
             domain: domain,
             path: '/',
-            sameSite: 'Strict' // or 'Lax' depending on your requirement
+            sameSite: 'None' // or 'Lax' depending on your requirement
         });
 
         res.cookie('refreshToken', refreshToken, { 
@@ -72,7 +72,7 @@ class TokenService{
             secure: isProduction,
             path: '/',
             domain: domain,
-            sameSite: 'Strict' // or 'Lax' depending on your requirement
+            sameSite: 'None' // or 'Lax' depending on your requirement
         });
     };
 
@@ -86,7 +86,7 @@ class TokenService{
             domain: domain, 
             secure: isProduction, 
             httpOnly: true, 
-            sameSite: 'Strict' // or 'Lax' depending on your requirement
+            sameSite: 'None' // or 'Lax' depending on your requirement
         };
 
         await userModel.findByIdAndUpdate(UserId, {token: ""});
