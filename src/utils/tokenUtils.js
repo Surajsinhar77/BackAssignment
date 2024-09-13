@@ -60,7 +60,7 @@ class TokenService{
 
         res.cookie('accessToken', accessToken, { 
             httpOnly: true,
-            secure: !isProduction,
+            secure: true,
             // domain: domain,
             path: '/',
             sameSite: 'None' // or 'Lax' depending on your requirement
@@ -69,7 +69,7 @@ class TokenService{
         res.cookie('refreshToken', refreshToken, { 
             maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
             httpOnly: true,
-            secure: !isProduction,
+            secure: true,
             path: '/',
             // domain: domain,
             sameSite: 'None' // or 'Lax' depending on your requirement
@@ -83,8 +83,8 @@ class TokenService{
     
         const cookieOptions = { 
             path: '/', 
-            domain: domain, 
-            secure: isProduction, 
+            // domain: domain, 
+            secure: true, 
             httpOnly: true, 
             sameSite: 'None' // or 'Lax' depending on your requirement
         };
