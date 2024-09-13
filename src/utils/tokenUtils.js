@@ -56,7 +56,7 @@ class TokenService{
 
     setTokenCookies = async (res, accessToken, refreshToken) => {
         const isProduction = process.env.NODE_ENV === 'production';
-        const domain = isProduction ? 'localhost:5173' : undefined;
+        const domain = isProduction ? 'localhost:3000' : undefined;
 
         res.cookie('accessToken', accessToken, { 
             httpOnly: true,
